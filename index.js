@@ -19,10 +19,10 @@ const os = require('os');
 const app = express();
 app.listen(80);
 
-const discordToken = process.env["MTA5MzE0NTE3MDY0OTgwOTAyNg.GZSA0O.72Vi4VMW9btIpYWccfXVOe0LSbuF2nUJWr_Zik"];
-const channelId = process.env["1093144675189272628"];
-const guildId = process.env["1093144674534965260"];
-const clientId = process.env["1093145170649809026"];
+const discordToken = "MTA4NTg0MTU5MzA5MDcwNzQ4Nw.G1Rhk1.zBxiQxeA1mayZ7HyuVUNs0tsEF4Z0wyfmwozrw"
+const channelId = "1093162228942909580"
+const guildId = "1093144674534965260"
+const clientId = "1085841593090707487"
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages] });
 const bots = {};
@@ -294,7 +294,7 @@ client.on(Events.InteractionCreate, async interaction => {
         }
 
         const embed = new EmbedBuilder()
-            .setColor("#58b9ff")
+            .setColor("Green")
             .setTitle('AdBot Activated')
             .addFields(
                 { name: 'Username', value: profile.name },
@@ -303,7 +303,7 @@ client.on(Events.InteractionCreate, async interaction => {
                 { name: 'Session token', value: token },
             )
             .setFooter({
-                text: "Fazz's AdBot for Hypixel"
+                text: "Rishie's AdBot for Hypixel"
             });
 
         interaction.editReply({
